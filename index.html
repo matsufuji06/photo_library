@@ -46,10 +46,25 @@
     ];
 
     let img;
+    let caption;
+    let div;
+
+    // 画像部分をjsonで表示
     img = document.createElement("img");
     img.setAttribute("src", images[0].path);
 
-    document.getElementById("img_unit").appendChild(img);
+    // コメント部分をjsonで表示
+    caption = document.createElement("div");
+    caption.className = "inner";
+    caption.innerHTML = "<p>" + images[0].caption + "<span>" + images[0].name + "</span></p>";
+
+    // 大枠のdivをjsonで表示
+    div = document.createElement("div");
+    div.className = "photo";
+    div.appendChild(img);
+    div.appendChild(caption);
+
+    document.getElementById("img_unit").appendChild(div);
   </script>
 </body>
 </html>
