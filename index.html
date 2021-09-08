@@ -15,11 +15,19 @@
   </header>
 
   <div class="container">
-    <div class="img_unit">
-      <div class="photo">
+    <div id="img_unit">
+      <!-- <div class="photo">
         <img src="img/01.jpg">
         <div class="inner"><p>コメント１<span>nickname</span></p></div>
       </div>
+      <div class="photo">
+        <img src="img/02.jpg">
+        <div class="inner"><p>コメント２<span>nickname</span></p></div>
+      </div>
+      <div class="photo">
+        <img src="img/03.jpg">
+        <div class="inner"><p>コメント３<span>nickname</span></p></div>
+      </div> -->
     </div>
   </div>
 
@@ -29,10 +37,19 @@
         "path": "img/01.jpg",
         "name": "name01",
         "caption": "コメント１"
+      },
+      {
+        "path": "img/02.jpg",
+        "name": "name02",
+        "caption": "コメント２"
       }
     ];
 
-    alert(images[0].caption);
+    let img;
+    img = document.createElement("img");
+    img.setAttribute("src", images[0].path);
+
+    document.getElementById("img_unit").appendChild(img);
   </script>
 </body>
 </html>
