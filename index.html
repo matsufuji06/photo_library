@@ -38,10 +38,10 @@
     ajax.send(null);
 
     ajax.onreadystatechange = function () {
-      if (ajax.readyState === 4 && ajax.status === 200) {
+      if (ajax.readyState === XMLHttpRequest.DONE && ajax.status === 200) {
         for (let i=0; i<this.response.length; i++) {
           alert(this.response[i].path);
-          
+
         }
       }
     };
