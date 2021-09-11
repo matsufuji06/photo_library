@@ -38,7 +38,12 @@
     ajax.send(null);
 
     ajax.onreadystatechange = function () {
-      alert(ajax.readyState);
+      if (ajax.readyState === 4 && ajax.status === 200) {
+        for (let i=0; i<this.response.length; i++) {
+          alert(this.response[i].path);
+          
+        }
+      }
     };
 
   </script>
